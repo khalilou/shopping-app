@@ -3,6 +3,8 @@ import { Routes, Route } from "react-router-dom";
 import { Home } from "./components/Home";
 import { About } from "./components/About";
 import { Navbar } from "./components/Navbar";
+import { Shop } from "./Pages/shop";
+import { Cart } from "./Pages/cart";
 
 
 function App() {
@@ -12,8 +14,8 @@ function App() {
       <>
         <Navbar />
           <Routes>
-            <Route path='/' element={<Home />}></Route>
-            <Route path='/About' element={<About />}></Route>
+            <Route path='/' element={<Shop/>} />
+            <Route path='/cart' element={<Cart/>} />
           </Routes>
       </>     
     </div>
