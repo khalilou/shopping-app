@@ -5,19 +5,20 @@ import { About } from "./components/About";
 import { Navbar } from "./components/Navbar";
 import { Shop } from "./Pages/shop";
 import { Cart } from "./Pages/cart";
+import { ShopContextProvider } from './shop-context';
 
 
 function App() {
   return (      
 
     <div className='App'>
-      <>
+      <ShopContextProvider>
         <Navbar />
           <Routes>
             <Route path='/' element={<Shop/>} />
             <Route path='/cart' element={<Cart/>} />
           </Routes>
-      </>     
+      </ShopContextProvider>     
     </div>
   );
 }
